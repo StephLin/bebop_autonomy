@@ -18,6 +18,11 @@ chmod +x ./*.sh
 
 This will midify your wifi configuration so as to run everything properly. Also the core package `parrot-sphinx` will be equipped.
 
+You need to reboot your system so as to enable wifi setting.
+```bash
+sudo shutdown -r now
+```
+
 ### Other distribution ###
 
 Please refer to the [official installation procedure](https://developer.parrot.com/docs/sphinx/installation.html).

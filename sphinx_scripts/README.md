@@ -12,6 +12,7 @@ This directory stores 2 bash scripts that help developer install and launch simu
 Run the following command (root permission required):
 
 ```bash
+chmod +x ./*.sh
 ./install.sh
 ```
 

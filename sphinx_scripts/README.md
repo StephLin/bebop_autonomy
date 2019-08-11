@@ -1,4 +1,4 @@
-# Sphinx-scripts #
+# sphinx_scripts #
 
 This directory stores 2 bash scripts that help developer install and launch simulator ([parrot-sphinx](https://developer.parrot.com/docs/sphinx/index.html)) for bebop2.
 

@@ -20,8 +20,7 @@ PERSISTENT_RULE="SUBSYSTEM==\"net\", ACTION==\"add\", ATTR{address}==\"$IW_MAC\"
 
 NEED_RULE_SET=1
 
-if test -f "$PERSISTENT_NET"
-then
+if test -f "$PERSISTENT_NET"; then
     echo file $PERSISTENT_NET exists, check if rule is set ...
     if [ "$(cat $PERSISTENT_NET | grep $IW_MAC | grep -o wlan0)" == "wlan0" ]; then
         echo rule is set, skip rule setting
@@ -41,8 +40,8 @@ fi
 
 echo add key server to host ...
 
-# echo "deb http://plf.parrot.com/sphinx/binary `lsb_release -cs`/" | sudo tee /etc/apt/sources.list.d/sphinx.list > /dev/null
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 508B1AE5
+echo "deb http://plf.parrot.com/sphinx/binary `lsb_release -cs`/" | sudo tee /etc/apt/sources.list.d/sphinx.list > /dev/null
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 508B1AE5
 
 echo update repositories and install parrot-sphinx
 
